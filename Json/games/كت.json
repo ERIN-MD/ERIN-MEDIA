@@ -1,266 +1,118 @@
 [
     {
-        "question": "ويليام",
-        "response": "ويليام"
-    },
-    {
-        "question": "نامي",
-        "response": "نامي"
-    },
-    {
-        "question": "لوفي",
-        "response": "لوفي"
+        "question": "ناروتو",
+        "response": "ناروتو"
     },
     {
         "question": "ايرين",
         "response": "ايرين"
     },
     {
-        "question": "استا",
-        "response": "استا"
-    },
-    {
-        "question": "همتارو",
-        "response": "همتارو"
-    },
-    {
-        "question": "الويفيا",
-        "response": "الويفيا"
-    },
-    {
-        "question": "نويل",
-        "response": "نويل"
-    },
-    {
-        "question": "رايلي",
-        "response": "رايلي"
-    },
-    {
-        "question": "ال",
-        "response": "ال"
-    },
-    {
-        "question": "لاو",
-        "response": "لاو"
-    },
-    {
-        "question": "مادارا",
-        "response": "مادارا"
-    },
-    {
-        "question": "يوريتشي",
-        "response": "يوريتشي"
-    },
-    {
-        "question": "ايتاتشي",
-        "response": "ايتاتشي"
-    },
-    {
-        "question": "توبي",
-        "response": "توبي"
-    },
-    {
-        "question": "نوبارا",
-        "response": "نوبارا"
-    },
-    {
-        "question": "ليفاي",
-        "response": "ليفاي"
-    },
-    {
-        "question": "هاشيراما",
-        "response": "هاشيراما"
+        "question": "لوفي",
+        "response": "لوفي"
     },
     {
         "question": "بوروتو",
         "response": "بوروتو"
     },
     {
+        "question": "ايتاتشي",
+        "response": "ايتاتشي"
+    },
+    {
+        "question": "غوكو",
+        "response": "غوكو"
+    },
+    {
+        "question": "فيجيتا",
+        "response": "فيجيتا"
+    },
+    {
+        "question": "ترانكس",
+        "response": "ترانكس"
+    },
+    {
+        "question": "غوتين",
+        "response": "غوتين"
+    },
+    {
+        "question": "زورو",
+        "response": "زورو"
+    },
+    {
+        "question": "سانجي",
+        "response": "سانجي"
+    },
+    {
         "question": "يوسوب",
         "response": "يوسوب"
     },
     {
-        "question": "ريم",
-        "response": "ريم"
+        "question": "نامي",
+        "response": "نامي"
     },
     {
-        "question": "اوتشيها شيسوي",
-        "response": "اوتشيها شيسوي"
+        "question": "روبين",
+        "response": "روبين"
     },
     {
-        "question": "كيد",
-        "response": "كيد"
+        "question": "ميهوك",
+        "response": "ميهوك"
     },
     {
-        "question": "ميكاسا",
-        "response": "ميكاسا"
+        "question": "توبيراما",
+        "response": "توبيراما"
     },
     {
-        "question": "دانزو",
-        "response": "دانزو"
+        "question": "ال",
+        "response": "ال"
     },
     {
-        "question": "وينغ",
-        "response": "وينغ"
-    },
-    {
-        "question": "تينشيهان",
-        "response": "تينشيهان"
-    },
-    {
-        "question": "بيكوهان",
-        "response": "بيكوهان"
-    },
-    {
-        "question": "كازيكاجي",
-        "response": "كازيكاجي"
+        "question": "ميناتو",
+        "response": "ميناتو"
     },
     {
         "question": "جيرايا",
         "response": "جيرايا"
     },
     {
-        "question": "كازيكاجي",
-        "response": "كازيكاجي"
+        "question": " لايت",
+        "response": "لايت"
     },
     {
-        "question": "كوكومي",
-        "response": "كوكومي"
+        "question": "كاكاشي",
+        "response": "كاكاشي"
     },
     {
-        "question": "غيو",
-        "response": "غيو"
+        "question": "يويتشي",
+        "response": "يويتشي"
     },
     {
-        "question": "تشيو",
-        "response": "تشيو"
+        "question": "يوريتشي",
+        "response": "يوريتشي"
     },
     {
-        "question": "ساسوري",
-        "response": "ساسوري"
+        "question": "موزان",
+        "response": "موزان"
     },
     {
-        "question": "نيزوكو",
-        "response": "نيزوكو"
-    },
-    {
-        "question": "ميدوريا",
-        "response": "ميدوريا"
-    },
-    {
-        "question": "نيجي",
-        "response": "نيجي"
-    },
-    {
-        "question": "استا",
-        "response": "استا"
-    },
-    {
-        "question": "ليزا",
-        "response": "ليزا"
-    },
-    {
-        "question": "كاغويا",
-        "response": "كاغويا"
-    },
-    {
-        "question": "هينا",
-        "response": "هينا"
-    },
-    {
-        "question": "الوكا",
-        "response": "الوكا"
-    },
-    {
-        "question": "هيناتا",
-        "response": "هيناتا"
-    },
-    {
-        "question": "زينتسو",
-        "response": "زينتسو"
-    },
-    {
-        "question": "رينغوكو",
-        "response": "رينغوكو"
+        "question": "ايروين",
+        "response": "ايروين"
     },
     {
         "question": "ليفاي",
         "response": "ليفاي"
     },
     {
-        "question": "كورتا",
-        "response": "كورتا"
+        "question": "مادارا",
+        "response": "مادارا"
     },
     {
-        "question": "هيسوكا",
-        "response": "هيسوكا"
+        "question": "ميكاسا",
+        "response": "ميكاسا"
     },
     {
-       "question": "انوس",
-        "response": "انوس"
-    },
-    {
-       "question": "بياكوغان",
-        "response": "بياكوغان"
-    },
-    {
-       "question": "شوكو",
-        "response": "شوكو"
-    },
-    {
-       "question": "ديكو",
-        "response": "ديكو"
-    },
-    {
-       "question": "يامي",
-        "response": "يامي"
-    },
-    {
-       "question": "فانجانس",
-        "response": "فانجانس"
-    },
-    {
-       "question": "يوليوس",
-        "response": "يوليوس"
-    },
-    {
-       "question": "تسوموغو",
-        "response": "تسوموغو"
-    },
-    {
-       "question": "نانامي",
-        "response": "نانامي"
-    },
-    {
-       "question": "ايزن",
-        "response": "ايزن"
-    },
-    {
-       "question": "زاراكي",
-        "response": "زاراكي"
-    },
-    {
-       "question": "اوراهارا",
-        "response": "اوراهارا"
-    },
-    {
-       "question": "اينوي",
-        "response": "اينوي"
-    },
-    {
-       "question": "غوهان",
-        "response": "غوهان"
-    },
-    {
-       "question": "كيريلين",
-        "response": "كيريلين"
-    },
-    {
-       "question": "هيناتسورو",
-        "response": "هيناتسورو"
-    },
-    {
-       "question": "ريتشيل",
-       "response": "ريتشيل"
-}
+        "question": "ارمين",
+        "response": "ارمين"
+    }
 ]

@@ -1,0 +1,266 @@
+[
+    {
+        "question": "اشيلاد",
+        "response": "ا ش ي ل ا د"
+    },
+    {
+        "question": "نامي",
+        "response": "ن ا م ي"
+    },
+    {
+        "question": "لوفي",
+        "response": "ل و ف ي"
+    },
+    {
+        "question": "ايرين",
+        "response": "ا ي ر ي ن"
+    },
+    {
+        "question": "استا",
+        "response": "ا س ت ا"
+    },
+    {
+        "question": "كرول",
+        "response": "ك ر و ل"
+    },
+    {
+        "question": "موب",
+        "response": "م و ب "
+    },
+    {
+        "question": "نويل",
+        "response": "ن و ي ل"
+    },
+    {
+        "question": "رايلي",
+        "response": "ر ا ي ل ي"
+    },
+    {
+        "question": "ال",
+        "response": "ا ل"
+    },
+    {
+        "question": "لاو",
+        "response": "ل ا و"
+    },
+    {
+        "question": "مادارا",
+        "response": "م ا د ا ر ا"
+    },
+    {
+        "question": "يوريتشي",
+        "response": "ي و ر ي ت ش ي"
+    },
+    {
+        "question": "ايتاتشي",
+        "response": "ا ي ت ا ت ش ي"
+    },
+    {
+        "question": "ساكورا",
+        "response": "س ا ك و ر ا"
+    },
+    {
+        "question": "يونو",
+        "response": "ي و ن و"
+    },
+    {
+        "question": "ليفاي",
+        "response": "ل ي ف ا ي"
+    },
+    {
+        "question": "هاشيراما",
+        "response": "ه ا ش ي ر ا م ا"
+    },
+    {
+        "question": "بوروتو",
+        "response": "ب و ر و ت و"
+    },
+    {
+        "question": "اوسوب",
+        "response": "ا و س و ب"
+    },
+    {
+        "question": "ريم",
+        "response": "ر ي م"
+    },
+    {
+        "question": "ميناتو",
+        "response": "م ي ن ا ت و"
+    },
+    {
+        "question": "كيد",
+        "response": "ك ي د"
+    },
+    {
+        "question": "ميكاسا",
+        "response": "م ي ك ا س ا"
+    },
+    {
+        "question": "دانزو",
+        "response": "د ا ن ز و"
+    },
+    {
+        "question": "فايوليت",
+        "response": "ف ا ي و ل ي ت"
+    },
+    {
+        "question": "سونغ",
+        "response": "س و ن غ"
+    },
+    {
+        "question": "هيناتا",
+        "response": "ه ي ن ا ت ا"
+    },
+    {
+        "question": "كازيكاجي",
+        "response": "ك ا ز ي ك ا ج ي"
+    },
+    {
+        "question": "جيرايا",
+        "response": "ج ي ر ا ي ا"
+    },
+    {
+        "question": "تانجيرو",
+        "response": "ت ا ن ج ي ر و"
+    },
+    {
+        "question": "نيزوكو",
+        "response": "ن ي ز و ك و"
+    },
+    {
+        "question": "غيو",
+        "response": "غ ي و"
+    },
+    {
+        "question": "دازازي",
+        "response": "د ا ز ا ي"
+    },
+    {
+        "question": "ساسوري",
+        "response": "س ا س و ر ي"
+    },
+    {
+        "question": "موزان",
+        "response": "م و ز ا ن"
+    },
+    {
+        "question": "ميدوريا",
+        "response": "م ي د و ر ي ا"
+    },
+    {
+        "question": "نيجي",
+        "response": "ن ي ج ي"
+    },
+    {
+        "question": "مايكي",
+        "response": "م ا ي ك ي"
+    },
+    {
+        "question": "ليزا",
+        "response": "ل ي ز ا"
+    },
+    {
+        "question": "كاغويا",
+        "response": "ك ا غ و ي ا"
+    },
+    {
+        "question": "هينا",
+        "response": "ه ي ن ا"
+    },
+    {
+        "question": "الوكا",
+        "response": "ا ل و ك ا"
+    },
+    {
+        "question": "اينو",
+        "response": "ا ي ن و"
+    },
+    {
+        "question": "زينتسو",
+        "response": "ز ي ن ت س و"
+    },
+    {
+        "question": "رينغوكو",
+        "response": "ر ي ن غ و ك و"
+    },
+    {
+        "question": "ليفاي",
+        "response": "ل ي ف ا ي"
+    },
+    {
+        "question": "غون",
+        "response": "غ و ن"
+    },
+    {
+        "question": "هيسوكا",
+        "response": "ه ي س و ك ا"
+    },
+    {
+       "question": "انوس",
+        "response": "ا ن و س"
+    },
+    {
+       "question": "بياكوغان",
+        "response": "ب ي ا ك و غ ا ن"
+    },
+    {
+       "question": "شوكو",
+        "response": "ش و ك و"
+    },
+    {
+       "question": "ديكو",
+        "response": "د ي ك و"
+    },
+    {
+       "question": "يامي",
+        "response": "ي ا م ي"
+    },
+    {
+       "question": "غوكو",
+        "response": "غ و ك و"
+    },
+    {
+       "question": "يوليوس",
+        "response": "ي و ل ي و س"
+    },
+    {
+       "question": "تسوموغو",
+        "response": "ت س و م و غ و"
+    },
+    {
+       "question": "نانامي",
+        "response": "ن ا ن ا م ي"
+    },
+    {
+       "question": "ايزن",
+        "response": "ا ي ز ن"
+    },
+    {
+       "question": "زاراكي",
+        "response": "ز ا ر ا ك ي"
+    },
+    {
+       "question": "اوراهارا",
+        "response": "ا و ر ا ه ا ر ا"
+    },
+    {
+       "question": "اينوي",
+        "response": "ا ي ن و ي"
+    },
+    {
+       "question": "غوهان",
+        "response": "غ و ه ا ن"
+    },
+    {
+       "question": "كيريلين",
+        "response": "ك ي ر ي ل ي ن"
+    },
+    {
+       "question": "عمك رين",
+        "response": "ع م ك ر ي ن"
+    },
+    {
+       "question": "رين",
+       "response": "ر ي ن"
+}
+]
