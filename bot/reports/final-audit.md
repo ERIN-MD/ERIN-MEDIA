@@ -146,7 +146,7 @@ Full detail in `reports/ui-migration.json`.
 
 ## 14–17. Tests
 
-`reports/test-summary.json` — **45 total: 45 PASS, 0 FAIL, 0 SUSPECT, 0 env-blocked.**
+`reports/test-summary.json` — **46 total: 46 PASS, 0 FAIL, 0 SUSPECT, 0 env-blocked.**
 
 The runner classifies a test that exits 0 **without printing anything** as `SUSPECT`, never as a pass — that is precisely how the removed exception handler produced false green runs.
 
@@ -162,9 +162,39 @@ Test-contract changes, each documented in the test file itself:
 | `autoai-always-reply`, `autoai-behavioral` | intentional contract update | `alwaysReply` is now derived from `replyMode`, and the status panel renders through the design system |
 | `maro-text-style` | intentional contract update | asserted the **legacy visual identity**, which was deliberately replaced |
 
-New tests added: `security-identity`, `ui-menu-engine`, `ui-feature-flag`, plus the three relocated agent tests.
+New tests added: `security-identity`, `ui-menu-engine`, `ui-feature-flag`, `registration-gate`, plus the three relocated agent tests.
 
 Lint went from **187 errors to 0**. Those were real defects: missing `fs`/`path`/`te` imports (crash on use), a `const` reassignment, a `sendRgbPreview`/`sendRpgPreview` typo, `currentGroup` out of scope in two `catch` blocks, `item`/`sock` undefined in `market.js`, 16 duplicate object keys silently killing colour options, three switch fall-throughs that sent the user two replies, and an always-true `|| true` condition. `document`/`location` inside `page.evaluate()` were correctly identified as **false positives** and given browser globals rather than being "fixed".
+
+---
+
+## 17b. Post-delivery fix — total lockout for every non-owner user
+
+Reported after delivery: the bot appeared completely unresponsive. Reproduced by
+running the real `messageHandler` against a non-owner sender, which showed a
+**deadlock that shipped in the original bot**:
+
+- `config.registration.enabled` is `true`, so every command from a user who is
+  not registered, not the owner and not premium is answered with
+  *"التسجيل مطلوب — اكتب `.تسجيل`"* (`src/handler.js:1692`).
+- **No plugin ever registered the name `تسجيل`.** `plugins/user/daftar.js`
+  declared only `name: "daftar"`, `alias: ["register"]`.
+- So: any command → "type `.تسجيل`" → `.تسجيل` does nothing → locked out.
+  Worse, with a registration session already open, `.تسجيل` was swallowed as an
+  *answer* to the session and stored as the user's name.
+
+Verified present at the baseline commit, so this is pre-existing, not a
+regression from this work. The lint warnings reported alongside it are style
+signals only (0 errors) and never affected runtime.
+
+**Fix:** `daftar` now also answers `تسجيل`, `التسجيل`, `سجل` and `انشاء_حساب` —
+purely additive, no command or alias removed. Guarded by
+`tests/registration-gate.test.mjs`, which asserts that whatever command the gate
+*tells* the user to type actually resolves, so this class of bug cannot return.
+
+Registration can also be turned off entirely with
+`config.registration.enabled = false`; that is the owner's choice and was left
+as shipped.
 
 ---
 

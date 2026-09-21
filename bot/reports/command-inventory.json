@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-21T21:56:39.342Z",
+  "generatedAt": "2026-09-21T22:49:46.430Z",
   "stats": {
     "pluginFiles": 897,
     "pluginsParsed": 897,
     "importFailures": 0,
     "uniqueCommands": 1201,
-    "uniqueAliases": 1258,
+    "uniqueAliases": 1262,
     "categories": 36,
     "ownerCommands": 188,
     "premiumCommands": 16,
@@ -14651,6 +14651,12 @@
       ]
     },
     {
+      "key": "التسجيل",
+      "files": [
+        "plugins/user/daftar.js"
+      ]
+    },
+    {
       "key": "التشابه",
       "files": [
         "plugins/owner/التشابه.js"
@@ -14696,6 +14702,12 @@
       "key": "انستا",
       "files": [
         "plugins/downloader/ريل.js"
+      ]
+    },
+    {
+      "key": "انشاء_حساب",
+      "files": [
+        "plugins/user/daftar.js"
       ]
     },
     {
@@ -14880,6 +14892,12 @@
       ]
     },
     {
+      "key": "تسجيل",
+      "files": [
+        "plugins/user/daftar.js"
+      ]
+    },
+    {
       "key": "تشخير",
       "files": [
         "plugins/fun/شخره.js"
@@ -15056,6 +15074,12 @@
       "key": "زد",
       "files": [
         "plugins/ai/زد_اي.js"
+      ]
+    },
+    {
+      "key": "سجل",
+      "files": [
+        "plugins/user/daftar.js"
       ]
     },
     {
@@ -38372,7 +38396,11 @@
         "daftar"
       ],
       "aliases": [
-        "register"
+        "register",
+        "تسجيل",
+        "التسجيل",
+        "سجل",
+        "انشاء_حساب"
       ],
       "category": "user",
       "description": "التسجيل كمستخدم للبوت عبر جلسة ردود تفاعلية",

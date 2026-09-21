@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T22:01:39.319Z",
+  "generatedAt": "2026-09-21T22:49:46.564Z",
   "before": {
     "file": "reports/command-inventory.BEFORE.json",
     "pluginFiles": 897,
@@ -28,7 +28,7 @@
     "pluginsParsed": 897,
     "importFailures": 0,
     "uniqueCommands": 1201,
-    "uniqueAliases": 1258,
+    "uniqueAliases": 1262,
     "categories": 36,
     "ownerCommands": 188,
     "premiumCommands": 16,
@@ -52,7 +52,11 @@
   "removedAliases": [],
   "addedAliases": [
     "blur",
-    "filter"
+    "filter",
+    "التسجيل",
+    "انشاء_حساب",
+    "تسجيل",
+    "سجل"
   ],
   "removedPluginFiles": [],
   "addedPluginFiles": [
