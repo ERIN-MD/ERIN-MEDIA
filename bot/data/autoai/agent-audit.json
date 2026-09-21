@@ -768,7 +768,151 @@
       "output": "أدوات المشروع للمطور فقط.",
       "metadata": "{}",
       "timestamp": "2026-09-21T22:01:22.513Z"
+    },
+    {
+      "id": "audit-1790028353962-tj06p3",
+      "type": "approval_decided",
+      "runId": "run-1790028353958-4booi2",
+      "tool": "",
+      "actor": "owner@test",
+      "status": "approved",
+      "input": "{}",
+      "output": "",
+      "metadata": "{\"approvalId\":\"approval-1790028353960-kooi2d\"}",
+      "timestamp": "2026-09-21T22:05:53.962Z"
+    },
+    {
+      "id": "audit-1790028353964-0ztelx",
+      "type": "run_resumed",
+      "runId": "run-1790028353958-4booi2",
+      "tool": "",
+      "actor": "owner",
+      "status": "running",
+      "input": "{}",
+      "output": "",
+      "metadata": "{}",
+      "timestamp": "2026-09-21T22:05:53.964Z"
+    },
+    {
+      "id": "audit-1790028353965-b9b6yj",
+      "type": "resumed_tool_result",
+      "runId": "run-1790028353958-4booi2",
+      "tool": "project.write_file",
+      "actor": "owner",
+      "status": "success",
+      "input": "{\"path\":\"tests/fixtures/agent-control-target.txt\",\"content\":\"after\\n\"}",
+      "output": "ok",
+      "metadata": "{\"verified\":true}",
+      "timestamp": "2026-09-21T22:05:53.965Z"
+    },
+    {
+      "id": "audit-1790028353966-dipuox",
+      "type": "run_resume_finished",
+      "runId": "run-1790028353958-4booi2",
+      "tool": "",
+      "actor": "owner",
+      "status": "success",
+      "input": "{}",
+      "output": "",
+      "metadata": "{\"resultCount\":1}",
+      "timestamp": "2026-09-21T22:05:53.966Z"
+    },
+    {
+      "id": "audit-1790028379335-q15tn2",
+      "type": "approval_decided",
+      "runId": "run-1790028379331-rvcekm",
+      "tool": "",
+      "actor": "owner@test",
+      "status": "approved",
+      "input": "{}",
+      "output": "",
+      "metadata": "{\"approvalId\":\"approval-1790028379333-of4ktf\"}",
+      "timestamp": "2026-09-21T22:06:19.335Z"
+    },
+    {
+      "id": "audit-1790028379338-9t7acl",
+      "type": "run_resumed",
+      "runId": "run-1790028379331-rvcekm",
+      "tool": "",
+      "actor": "owner",
+      "status": "running",
+      "input": "{}",
+      "output": "",
+      "metadata": "{}",
+      "timestamp": "2026-09-21T22:06:19.338Z"
+    },
+    {
+      "id": "audit-1790028379340-6o6du7",
+      "type": "resumed_tool_result",
+      "runId": "run-1790028379331-rvcekm",
+      "tool": "project.write_file",
+      "actor": "owner",
+      "status": "success",
+      "input": "{\"path\":\"tests/fixtures/agent-control-target.txt\",\"content\":\"after\\n\"}",
+      "output": "ok",
+      "metadata": "{\"verified\":true}",
+      "timestamp": "2026-09-21T22:06:19.340Z"
+    },
+    {
+      "id": "audit-1790028379342-vm0edd",
+      "type": "run_resume_finished",
+      "runId": "run-1790028379331-rvcekm",
+      "tool": "",
+      "actor": "owner",
+      "status": "success",
+      "input": "{}",
+      "output": "",
+      "metadata": "{\"resultCount\":1}",
+      "timestamp": "2026-09-21T22:06:19.342Z"
+    },
+    {
+      "id": "audit-1790028391038-wrtrlz",
+      "type": "run_created",
+      "runId": "run-1790028391037-pt267p",
+      "tool": "",
+      "actor": "201999999999@s.whatsapp.net",
+      "status": "awaiting_approval",
+      "input": "{\"intent\":\"test_project\",\"highestRisk\":\"safe_execution\"}",
+      "output": "",
+      "metadata": "{}",
+      "timestamp": "2026-09-21T22:06:31.038Z"
+    },
+    {
+      "id": "audit-1790028391039-3whn0f",
+      "type": "run_blocked",
+      "runId": "run-1790028391037-pt267p",
+      "tool": "",
+      "actor": "201999999999@s.whatsapp.net",
+      "status": "blocked",
+      "input": "{}",
+      "output": "أدوات المشروع للمطور فقط.",
+      "metadata": "{}",
+      "timestamp": "2026-09-21T22:06:31.039Z"
+    },
+    {
+      "id": "audit-1790028391372-ywsf9x",
+      "type": "run_created",
+      "runId": "run-1790028391371-3d01ul",
+      "tool": "",
+      "actor": "201999999998@s.whatsapp.net",
+      "status": "awaiting_approval",
+      "input": "{\"intent\":\"test_project\",\"highestRisk\":\"safe_execution\"}",
+      "output": "",
+      "metadata": "{}",
+      "timestamp": "2026-09-21T22:06:31.372Z"
+    },
+    {
+      "id": "audit-1790028391373-xmay4w",
+      "type": "run_blocked",
+      "runId": "run-1790028391371-3d01ul",
+      "tool": "",
+      "actor": "201999999998@s.whatsapp.net",
+      "status": "blocked",
+      "input": "{}",
+      "output": "أدوات المشروع للمطور فقط.",
+      "metadata": "{}",
+      "timestamp": "2026-09-21T22:06:31.373Z"
     }
   ],
-  "updatedAt": "2026-09-21T22:01:22.513Z"
+  "updatedAt": "2026-09-21T22:06:31.373Z"
 }

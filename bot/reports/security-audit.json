@@ -44,12 +44,18 @@
     {
       "id": "SEC-04",
       "severity": "CRITICAL",
-      "title": "Live API keys committed in source",
+      "title": "Live credentials committed in source (7 across 5 files)",
       "status": "FIXED — ROTATION STILL REQUIRED BY A HUMAN",
-      "rootCauses": ["config.js — Google, Groq and a cov_live_ production key were hardcoded"],
+      "rootCauses": [
+        "config.js — Google API key, Groq key, and a *_live_ production key",
+        "plugins/ai/تخيل3.js — Cloudflare account id and a Cloudflare user API token",
+        "plugins/ai/مونيكا.js — a Monica session JWT and a client id",
+        "src/scraper/topmedia.js — a TopMedia API key"
+      ],
       "impact": "Anyone with the source could use the owner's paid quotas.",
-      "fix": "All keys now read from environment variables; .env.example documents every variable. The leaked values are NOT reproduced in this report.",
-      "humanActionRequired": "Revoke and rotate the three leaked keys at their providers. Code changes cannot undo the exposure."
+      "fix": "All seven now read from environment variables; .env.example documents every one. No leaked value is reproduced in this report.",
+      "humanActionRequired": "Revoke and rotate ALL SEVEN credentials at their providers. Note they were present in the uploaded archive, so treat them as public.",
+      "discoveryNote": "IMPORTANT: my first scan used high-confidence provider patterns and found only the three in config.js. GitHub push protection rejected the push and identified the Cloudflare token. A broadened scan (provider prefixes + JWT + assignment-position opaque literals) then found the remaining four. The lesson is recorded here rather than hidden: a narrow secret regex gives false assurance."
     },
     {
       "id": "SEC-05",
@@ -69,7 +75,9 @@
       "severity": "HIGH",
       "title": "Global uncaughtException handler silently swallowed every crash",
       "status": "FIXED",
-      "rootCauses": ["src/lib/maro-lid.js — process.on('uncaughtException') saved a cache and returned, suppressing the error process-wide"],
+      "rootCauses": [
+        "src/lib/maro-lid.js — process.on('uncaughtException') saved a cache and returned, suppressing the error process-wide"
+      ],
       "impact": "Any uncaught error anywhere in the bot was hidden and the process continued in an unknown state. It also produced FALSE GREEN test runs: four test files crashed mid-run yet exited 0 while asserting nothing.",
       "fix": "Handler removed. Cache persistence is covered by the 'exit' event, which also fires after an uncaught crash. index.js retains the real anti-crash handler that logs.",
       "evidence": "On the original code, ai-workspace-router / autoai-arabic-personas / owner-bypass / ai-studio-behavioral exited 0 while printing no success line."
@@ -79,7 +87,9 @@
       "severity": "HIGH",
       "title": "Per-user rate limiter was dead code",
       "status": "FIXED",
-      "rootCauses": ["src/handler.js — isSpamming() short-circuits on config.features.antiSpam, a key that was never defined anywhere in the project"],
+      "rootCauses": [
+        "src/handler.js — isSpamming() short-circuits on config.features.antiSpam, a key that was never defined anywhere in the project"
+      ],
       "impact": "The 8-commands-per-3-seconds limiter never ran. Only the global 100/min limiter was active.",
       "fix": "config.features.antiSpam added and enabled."
     },
@@ -104,5 +114,9 @@
     "no inbound network listener — the bot exposes no HTTP server",
     "no WhatsApp credential leakage — session/ is empty and auto-backup excludes creds.json and .env",
     "path traversal guard in maro-agent-registry.safeResolve is correct (resolves, rejects '..', enforces an allowlist, blocks .env/session/database)"
-  ]
+  ],
+  "postRemediationScan": {
+    "scanner": "provider prefixes + Cloudflare/JWT/AWS/Telegram/DO + assignment-position opaque literals >=24 chars",
+    "result": "0 findings across all .js/.mjs/.cjs/.json/.md/.txt outside node_modules"
+  }
 }

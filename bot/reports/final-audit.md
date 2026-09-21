@@ -87,14 +87,24 @@ Full detail with root causes and fixes in `reports/security-audit.json`. Summary
 | SEC-01 | CRITICAL | Any channel granted owner privileges (**two** independent root causes) | FIXED |
 | SEC-02 | CRITICAL | Hidden auto-follow of 7 channels + auto-join of 2 groups | FIXED |
 | SEC-03 | CRITICAL | Identity matching used `includes`/`endsWith` both ways | FIXED |
-| SEC-04 | CRITICAL | Three live API keys hardcoded | FIXED — **rotation still required** |
+| SEC-04 | CRITICAL | **Seven** live credentials hardcoded across 5 files | FIXED — **rotation still required** |
 | SEC-05 | HIGH | Four unguarded code-execution consoles | FIXED |
 | SEC-06 | HIGH | Global handler swallowed every uncaught exception | FIXED |
 | SEC-07 | HIGH | Per-user rate limiter was dead code | FIXED |
 | SEC-08 | MEDIUM | Stack traces printed unconditionally | FIXED |
 | SEC-09 | INFO | Owner number ≠ pairing number | **needs a human decision** |
 
-Verified clean: no command injection, no inbound listener, no credential leakage, and a correct path-traversal guard in the agent tooling.
+Verified clean: no command injection, no inbound listener, no WhatsApp credential leakage, and a correct path-traversal guard in the agent tooling.
+
+**On SEC-04, a correction worth recording.** My first scan used high-confidence provider
+patterns and reported three keys, all in `config.js`. That was incomplete. GitHub push
+protection rejected the push and named a **Cloudflare user API token** in
+`plugins/ai/تخيل3.js`. Broadening the scan (provider prefixes, JWTs, and any
+assignment-position opaque literal of 24+ characters) surfaced **four more**: the
+Cloudflare account id and token, a Monica session JWT and client id, and a TopMedia key —
+**seven in total across five files**. All are now read from environment variables and a
+re-scan reports zero. The lesson stands in the report rather than being quietly fixed: a
+narrow secret regex gives false assurance.
 
 ---
 
@@ -165,7 +175,7 @@ Lint went from **187 errors to 0**. Those were real defects: missing `fs`/`path`
 3. **27 dependency advisories remain.** Fixing them requires major bumps to the WhatsApp/media stack.
 4. **No live WhatsApp test.** No credentials exist in this environment; the bot was verified to boot and reach the pairing handshake. Everything else was verified by executing the real modules.
 5. **1103 lint warnings remain** (unused vars, empty catches, `preserve-caught-error`). Quality signals, not defects; left visible rather than suppressed.
-6. **Three leaked API keys still need human rotation.**
+6. **All seven leaked credentials still need human rotation.** They shipped inside the uploaded archive, so treat them as public.
 7. **Memory monitor calls `process.exit(1)` at 1 GB** but `npm start` has no supervisor — run under pm2/systemd.
 
 ---
