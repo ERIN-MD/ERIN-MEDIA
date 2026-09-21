@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "preferences": {},
+  "facts": {
+    "test:1790025709953": {},
+    "test:1790026744148": {},
+    "test:1790027145753": {},
+    "test:1790027549078": {},
+    "test:1790027906383": {},
+    "test:1790028070512": {}
+  },
+  "decisions": [],
+  "capabilities": {
+    "test:1790025709953": {
+      "capability": {
+        "value": "فحص تجريبي",
+        "confidence": 1,
+        "source": "user",
+        "owner": "",
+        "updatedAt": "2026-09-21T21:21:49.955Z",
+        "expiresAt": "2026-09-21T21:22:49.955Z"
+      }
+    },
+    "test:1790026744148": {
+      "capability": {
+        "value": "فحص تجريبي",
+        "confidence": 1,
+        "source": "user",
+        "owner": "",
+        "updatedAt": "2026-09-21T21:39:04.150Z",
+        "expiresAt": "2026-09-21T21:40:04.150Z"
+      }
+    },
+    "test:1790027145753": {
+      "capability": {
+        "value": "فحص تجريبي",
+        "confidence": 1,
+        "source": "user",
+        "owner": "",
+        "updatedAt": "2026-09-21T21:45:45.756Z",
+        "expiresAt": "2026-09-21T21:46:45.756Z"
+      }
+    },
+    "test:1790027549078": {
+      "capability": {
+        "value": "فحص تجريبي",
+        "confidence": 1,
+        "source": "user",
+        "owner": "",
+        "updatedAt": "2026-09-21T21:52:29.080Z",
+        "expiresAt": "2026-09-21T21:53:29.080Z"
+      }
+    },
+    "test:1790027906383": {
+      "capability": {
+        "value": "فحص تجريبي",
+        "confidence": 1,
+        "source": "user",
+        "owner": "",
+        "updatedAt": "2026-09-21T21:58:26.386Z",
+        "expiresAt": "2026-09-21T21:59:26.386Z"
+      }
+    },
+    "test:1790028070512": {
+      "capability": {
+        "value": "فحص تجريبي",
+        "confidence": 1,
+        "source": "user",
+        "owner": "",
+        "updatedAt": "2026-09-21T22:01:10.514Z",
+        "expiresAt": "2026-09-21T22:02:10.514Z"
+      }
+    }
+  },
+  "lessons": [],
+  "updatedAt": "2026-09-21T22:01:10.515Z"
+}

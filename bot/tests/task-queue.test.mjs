@@ -1,0 +1,11 @@
+import assert from "node:assert/strict";
+import { enqueueTask, getTaskStatus } from "../src/lib/maro-task-queue.js";
+const task = enqueueTask({ type: "test", run: async () => "ok" });
+await new Promise((resolve) => setTimeout(resolve, 20));
+assert.equal(getTaskStatus(task.id).status, "completed");
+const disposable = enqueueTask({ type: "cleanup", owner: "owner@test", cleanupMs: 1, run: async () => "done" });
+await disposable.done;
+assert.equal(getTaskStatus(disposable.id).owner, "owner@test");
+await new Promise((resolve) => setTimeout(resolve, 20));
+assert.equal(getTaskStatus(disposable.id), null);
+console.log("task queue tests: passed");

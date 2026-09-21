@@ -1,0 +1,281 @@
+{
+  "generatedAt": "2026-09-21T21:59:41.722Z",
+  "total": 45,
+  "passed": 45,
+  "failed": 0,
+  "suspect": 0,
+  "blockedByEnv": 0,
+  "note": "SUSPECT = exited 0 but printed nothing. That is how the removed uncaughtException handler produced false green runs, so it is never counted as a pass.",
+  "results": [
+    {
+      "test": "agent-control.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "agent control approval tests: passed"
+    },
+    {
+      "test": "agent-health-memory.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "agent health and memory tests: passed"
+    },
+    {
+      "test": "agent-plugin.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "agent plugin command tests: passed"
+    },
+    {
+      "test": "ai-provider-smoke.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "ai provider smoke test: 2/5 available"
+    },
+    {
+      "test": "ai-studio-behavioral.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "ai studio behavioral tests: passed"
+    },
+    {
+      "test": "ai-studio-foundation.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "ai studio foundation tests: passed"
+    },
+    {
+      "test": "ai-studio-image-policy.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "ai studio image policy tests: passed"
+    },
+    {
+      "test": "ai-workspace-router.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "ai workspace and router tests: passed"
+    },
+    {
+      "test": "autoai-always-reply.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "auto ai always reply tests: passed"
+    },
+    {
+      "test": "autoai-arabic-personas.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "autoai arabic personas tests: passed"
+    },
+    {
+      "test": "autoai-behavioral.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "autoai behavioral tests: passed"
+    },
+    {
+      "test": "bot-loop-guard.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "✅ bot-loop-guard.test.mjs passed"
+    },
+    {
+      "test": "environment-key-guard.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "environment key guard tests: passed"
+    },
+    {
+      "test": "handler-speaker-priority.integration.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "✅ handler speaker-priority integration test passed"
+    },
+    {
+      "test": "import-repair.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "import repair tests: passed"
+    },
+    {
+      "test": "local-image-enhancement.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "local image enhancement dependency: passed"
+    },
+    {
+      "test": "manus-agent.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "manus-agent test: OK"
+    },
+    {
+      "test": "maro-ai-output.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "maro ai output tests: passed"
+    },
+    {
+      "test": "maro-brat.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "local brat image tests: passed"
+    },
+    {
+      "test": "maro-code-review.approval.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "maro-code-review approval test: OK"
+    },
+    {
+      "test": "maro-code-review.e2e.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "maro-code-review e2e test: OK"
+    },
+    {
+      "test": "maro-code-review.live.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "maro-code-review live provider test: OK"
+    },
+    {
+      "test": "maro-code-review.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "maro-code-review test: OK"
+    },
+    {
+      "test": "maro-fake-card.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "local fake card tests: passed"
+    },
+    {
+      "test": "maro-link-guard.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "link guard tests: passed"
+    },
+    {
+      "test": "maro-natural-ai.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "maro-natural-ai test: OK"
+    },
+    {
+      "test": "maro-nvidia-ai.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "maro-nvidia-ai test: OK"
+    },
+    {
+      "test": "maro-plugin-workbench.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "plugin workbench tests: passed"
+    },
+    {
+      "test": "maro-quote.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "local quote image tests: passed"
+    },
+    {
+      "test": "maro-text-style.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "text style tests (AXION contract): passed"
+    },
+    {
+      "test": "mode-config-guard.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "mode config guard test: passed"
+    },
+    {
+      "test": "owner-bypass.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "owner bypass tests: passed"
+    },
+    {
+      "test": "pindl.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "pinterest extractor tests: passed"
+    },
+    {
+      "test": "plugin-diagnostics.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "plugin diagnostics tests: passed"
+    },
+    {
+      "test": "plugin-move.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "plugin move tests: passed"
+    },
+    {
+      "test": "provider-health.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "provider health tests: passed"
+    },
+    {
+      "test": "raw-code-plugin.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "raw code plugin tests: passed"
+    },
+    {
+      "test": "reddit.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "reddit extractor tests: passed"
+    },
+    {
+      "test": "reply-variant-selector.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "reply variant selector tests: passed"
+    },
+    {
+      "test": "security-identity.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "security identity + newsletter privilege tests: passed"
+    },
+    {
+      "test": "spotify-provider.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "spotify provider tests: passed"
+    },
+    {
+      "test": "task-queue.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "task queue tests: passed"
+    },
+    {
+      "test": "tiktoksearch.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "tiktoksearch response adapter: passed"
+    },
+    {
+      "test": "ui-feature-flag.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "ui feature flag tests: passed"
+    },
+    {
+      "test": "ui-menu-engine.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "lastLine": "AXION ui/menu engine tests: passed"
+    }
+  ]
+}
