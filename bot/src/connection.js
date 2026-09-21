@@ -299,6 +299,33 @@ async function startConnection(options = {}) {
   store.bind(sock.ev);
   sock.store = store;
 
+  // ── تتبّع الإرسال (اختياري) ────────────────────────────────────
+  // شغّله بـ MAROBOT_TRACE_SEND=true عندما "لا يرد البوت" رغم أن السجل
+  // يُظهر وصول الرسائل: يطبع لكل إرسال الوجهة والنوع والنتيجة أو الخطأ،
+  // فيفصل بوضوح بين "لم يُنتج رداً" و"أنتجه ولم يُسلَّم".
+  if (process.env.MAROBOT_TRACE_SEND === "true") {
+    const _origSendMessage = sock.sendMessage.bind(sock);
+    let _seq = 0;
+    sock.sendMessage = async (jid, content, options) => {
+      const id = ++_seq;
+      const kind = content && typeof content === "object" ? Object.keys(content).join("+") : typeof content;
+      const preview = String(content?.text ?? content?.caption ?? "").replace(/\s+/g, " ").slice(0, 70);
+      colors.logger.info("send", `#${id} -> ${jid} [${kind}] "${preview}"`);
+      try {
+        const result = await _origSendMessage(jid, content, options);
+        colors.logger.success(
+          "send",
+          `#${id} accepted by WhatsApp · id=${result?.key?.id || "?"} · to=${result?.key?.remoteJid || "?"}`,
+        );
+        return result;
+      } catch (error) {
+        colors.logger.error("send", `#${id} FAILED -> ${jid}: ${error?.message || error}`);
+        throw error;
+      }
+    };
+    colors.logger.warn("send", "تتبّع الإرسال مُفعّل (MAROBOT_TRACE_SEND=true)");
+  }
+
   connectionState.sock = sock;
   extendSocket(sock);
 
