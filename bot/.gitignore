@@ -1,0 +1,15 @@
+node_modules/
+session/
+temp/
+tmp/
+downloads/
+storage/
+*.log
+.env
+.env.*
+!.env.example
+
+# artifacts produced by running the test suite
+backup/
+tests/fixtures/*.agent-backup-*
+*.agent-backup-*

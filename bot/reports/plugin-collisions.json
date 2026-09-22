@@ -1,0 +1,553 @@
+{
+  "generatedAt": "2026-09-21T21:57:03.669Z",
+  "note": "Map.set overwrote duplicates silently before this change; the loader now records every collision. Resolution is last-loaded-wins, and load order follows the filesystem, so these should be resolved by renaming.",
+  "total": 90,
+  "distinctKeys": 78,
+  "byType": {
+    "alias-shadows-command": 18,
+    "alias": 58,
+    "command": 14
+  },
+  "collisions": [
+    {
+      "type": "alias-shadows-command",
+      "key": "ai",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/deepseek-v4-pro.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/ai.js"
+    },
+    {
+      "type": "alias",
+      "key": "ذكاء",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/deepseek-v4-pro.js",
+      "shadowedCommand": "ai"
+    },
+    {
+      "type": "alias",
+      "key": "شات",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/deepseek-v4-pro.js",
+      "shadowedCommand": "ai"
+    },
+    {
+      "type": "alias-shadows-command",
+      "key": "ai",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/التميز.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/ai.js"
+    },
+    {
+      "type": "alias",
+      "key": "ai",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/التميز.js",
+      "shadowedCommand": "اسأل"
+    },
+    {
+      "type": "alias",
+      "key": "flux",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/تخيل3.js",
+      "shadowedCommand": "تخيل"
+    },
+    {
+      "type": "alias",
+      "key": "ذكاء",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/تربو.js",
+      "shadowedCommand": "اسأل"
+    },
+    {
+      "type": "alias",
+      "key": "gpt",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/جيبيتي4.js",
+      "shadowedCommand": "2شات"
+    },
+    {
+      "type": "alias-shadows-command",
+      "key": "ai",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/جيبيتي4.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/ai.js"
+    },
+    {
+      "type": "alias",
+      "key": "ai",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/جيبيتي4.js",
+      "shadowedCommand": "التميز"
+    },
+    {
+      "type": "alias",
+      "key": "gemini",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/جيميني.js",
+      "shadowedCommand": "ai"
+    },
+    {
+      "type": "alias-shadows-command",
+      "key": "simi",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/سمسمي.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/simi.js"
+    },
+    {
+      "type": "alias",
+      "key": "ذكاء",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/شاتai.js",
+      "shadowedCommand": "تربو"
+    },
+    {
+      "type": "alias-shadows-command",
+      "key": "توليد",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/صورة.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/توليد.js"
+    },
+    {
+      "type": "alias",
+      "key": "generate",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/صورة.js",
+      "shadowedCommand": "توليد"
+    },
+    {
+      "type": "alias",
+      "key": "رسم",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/فن.js",
+      "shadowedCommand": "صورة"
+    },
+    {
+      "type": "alias",
+      "key": "nano",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/نيمو_نانو.js",
+      "shadowedCommand": "نانوبنانا"
+    },
+    {
+      "type": "alias",
+      "key": "نانو",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/نيمو_نانو.js",
+      "shadowedCommand": "توليد2"
+    },
+    {
+      "type": "command",
+      "key": "مكالمة",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/canvas/مكالمة.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/canvas/avatarjpg.js"
+    },
+    {
+      "type": "alias",
+      "key": "تنزيل",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/downloader/تحميل.js",
+      "shadowedCommand": "aio"
+    },
+    {
+      "type": "command",
+      "key": "ttmp4",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/downloader/تيكتوك.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/downloader/تيك_فيديو.js"
+    },
+    {
+      "type": "alias-shadows-command",
+      "key": "انستا",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/downloader/ريل.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/downloader/انستا.js"
+    },
+    {
+      "type": "alias",
+      "key": "insta",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/downloader/ريل.js",
+      "shadowedCommand": "انستا"
+    },
+    {
+      "type": "alias",
+      "key": "manga",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/downloader/مانهوا.js",
+      "shadowedCommand": "لمانغا"
+    },
+    {
+      "type": "command",
+      "key": "فن",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/fun/فن.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/ai/فن.js"
+    },
+    {
+      "type": "alias",
+      "key": "game",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/group/العاب.js",
+      "shadowedCommand": "لعبة"
+    },
+    {
+      "type": "alias",
+      "key": "chat",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/group/شات.js",
+      "shadowedCommand": "2شات"
+    },
+    {
+      "type": "command",
+      "key": "هدية",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/group/هدية.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/group/giveaways.js"
+    },
+    {
+      "type": "alias-shadows-command",
+      "key": "ping2",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/main/بينغ2.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/main/ping2.js"
+    },
+    {
+      "type": "command",
+      "key": "موسيقى2",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/media/موسيقى2.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/media/موسيقى.js"
+    },
+    {
+      "type": "command",
+      "key": "تثبيت",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/owner/install.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/group/تثبيت.js"
+    },
+    {
+      "type": "alias",
+      "key": "leave",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/owner/اخرج.js",
+      "shadowedCommand": "وداع"
+    },
+    {
+      "type": "alias",
+      "key": "debug",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/owner/اخطاء.js",
+      "shadowedCommand": "اصلاح"
+    },
+    {
+      "type": "command",
+      "key": "اعلان",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/owner/اعلان.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/group/اعلان.js"
+    },
+    {
+      "type": "alias",
+      "key": "botmode",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/owner/بوت_مود.js",
+      "shadowedCommand": "وضع_البوت"
+    },
+    {
+      "type": "alias",
+      "key": "شكل",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/owner/شكل_مسج.js",
+      "shadowedCommand": "شكل_المنيو"
+    },
+    {
+      "type": "alias",
+      "key": "fetch",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/owner/طلب.js",
+      "shadowedCommand": "api"
+    },
+    {
+      "type": "alias",
+      "key": "http",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/owner/طلب.js",
+      "shadowedCommand": "api"
+    },
+    {
+      "type": "alias",
+      "key": "autoreadsw",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/owner/قراءة_ستوريات.js",
+      "shadowedCommand": "قراءة_الحالات"
+    },
+    {
+      "type": "alias",
+      "key": "setrules",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/owner/قوانين_البوت.js",
+      "shadowedCommand": "تعيين_القواعد"
+    },
+    {
+      "type": "command",
+      "key": "مكالمة",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/owner/مكالمة.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/canvas/مكالمة.js"
+    },
+    {
+      "type": "alias",
+      "key": "addseller",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/panel/إدارة_البائعين.js",
+      "shadowedCommand": "إضافة_بائع"
+    },
+    {
+      "type": "alias",
+      "key": "unlimited",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/panel/انشاء_خادم.js",
+      "shadowedCommand": "التميز"
+    },
+    {
+      "type": "command",
+      "key": "ميم",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/random/ميم.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/fun/ميم.js"
+    },
+    {
+      "type": "alias",
+      "key": "asmaulhusna",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/religi/إسلامي.js",
+      "shadowedCommand": "أسماء_الله"
+    },
+    {
+      "type": "alias",
+      "key": "marry",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/rpg/ارتباط.js",
+      "shadowedCommand": "زواج"
+    },
+    {
+      "type": "alias",
+      "key": "divorce",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/rpg/انفصال.js",
+      "shadowedCommand": "طلاق"
+    },
+    {
+      "type": "command",
+      "key": "تأمل",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/rpg/تأمل.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/fun/تأمل.js"
+    },
+    {
+      "type": "command",
+      "key": "تحدي",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/rpg/تحدي.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/fun/تحدي.js"
+    },
+    {
+      "type": "alias",
+      "key": "lottery",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/rpg/يانصيب.js",
+      "shadowedCommand": "قرعة"
+    },
+    {
+      "type": "alias-shadows-command",
+      "key": "مباريات",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/asiariyadh.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/info/مباريات.js"
+    },
+    {
+      "type": "alias",
+      "key": "انمي",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/أنمي.js",
+      "shadowedCommand": "تحميل_انمي"
+    },
+    {
+      "type": "alias",
+      "key": "news",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/اخبار.js",
+      "shadowedCommand": "الجزيرة"
+    },
+    {
+      "type": "alias-shadows-command",
+      "key": "بنتر",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/بنتر_فيد.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/بنتر.js"
+    },
+    {
+      "type": "alias",
+      "key": "pin",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/بنتريست.js",
+      "shadowedCommand": "تثبيت"
+    },
+    {
+      "type": "alias-shadows-command",
+      "key": "apk",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/تطبيق.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/apk.js"
+    },
+    {
+      "type": "alias-shadows-command",
+      "key": "تحميل_تطبيق",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/تطبيق.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/downloader/تحميل_تطبيق.js"
+    },
+    {
+      "type": "alias",
+      "key": "info",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/تفاصيل.js",
+      "shadowedCommand": "بيانات"
+    },
+    {
+      "type": "command",
+      "key": "ساوند_تحميل",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/ساوند_تحميل.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/downloader/ساوند_تحميل.js"
+    },
+    {
+      "type": "alias",
+      "key": "spotify",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/سبوتيفاي.js",
+      "shadowedCommand": "سبوتيفاي_تحميل"
+    },
+    {
+      "type": "command",
+      "key": "كرة",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/كرة.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/asiariyadh.js"
+    },
+    {
+      "type": "alias-shadows-command",
+      "key": "مباريات",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/كرة.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/info/مباريات.js"
+    },
+    {
+      "type": "alias",
+      "key": "artinama",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/معنى_اسم.js",
+      "shadowedCommand": "معنى_الاسم"
+    },
+    {
+      "type": "alias",
+      "key": "wiki",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/ويكيبيديا.js",
+      "shadowedCommand": "ويكي"
+    },
+    {
+      "type": "alias-shadows-command",
+      "key": "pinpack",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/sticker/ملصقات.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/sticker/pinpack.js"
+    },
+    {
+      "type": "alias",
+      "key": "ppack",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/sticker/ملصقات.js",
+      "shadowedCommand": "pinpack"
+    },
+    {
+      "type": "alias",
+      "key": "pinsticker",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/sticker/ملصقات.js",
+      "shadowedCommand": "pinpack"
+    },
+    {
+      "type": "alias",
+      "key": "pinsearchpack",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/sticker/ملصقات.js",
+      "shadowedCommand": "pinpack"
+    },
+    {
+      "type": "alias-shadows-command",
+      "key": "attp2",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/sticker/نص_متحرك.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/sticker/attp2.js"
+    },
+    {
+      "type": "alias",
+      "key": "attp2",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/sticker/نص_متحرك.js",
+      "shadowedCommand": "attp2"
+    },
+    {
+      "type": "alias",
+      "key": "attp3",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/sticker/نص_متحرك.js",
+      "shadowedCommand": "attp2"
+    },
+    {
+      "type": "alias",
+      "key": "tts",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/tools/انطق.js",
+      "shadowedCommand": "تيك_البوم"
+    },
+    {
+      "type": "alias",
+      "key": "tempmail",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/tools/بريد_مؤقت.js",
+      "shadowedCommand": "بريد"
+    },
+    {
+      "type": "alias",
+      "key": "upscale",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/tools/تحسين_جودة.js",
+      "shadowedCommand": "رفع_جودة"
+    },
+    {
+      "type": "alias",
+      "key": "hd3",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/tools/رفع_جودة3.js",
+      "shadowedCommand": "تحسين_الصورة_3"
+    },
+    {
+      "type": "alias-shadows-command",
+      "key": "تطبيق",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/tools/صنع_تطبيق.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/search/تطبيق.js"
+    },
+    {
+      "type": "alias",
+      "key": "tts",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/tools/صوت.js",
+      "shadowedCommand": "انطق"
+    },
+    {
+      "type": "alias",
+      "key": "نطق",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/tools/صوت.js",
+      "shadowedCommand": "انطق"
+    },
+    {
+      "type": "alias-shadows-command",
+      "key": "موسيقى",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/tools/عزل.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/media/موسيقى.js"
+    },
+    {
+      "type": "command",
+      "key": "فحص",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/tools/فحص.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/game/فحص.js"
+    },
+    {
+      "type": "alias-shadows-command",
+      "key": "فحص",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/tools/فحص_موقع.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/tools/فحص.js"
+    },
+    {
+      "type": "alias",
+      "key": "bypass",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/tools/فك_رابط.js",
+      "shadowedCommand": "cfbypass"
+    },
+    {
+      "type": "alias",
+      "key": "ocr",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/tools/قراءة_الصورة.js",
+      "shadowedCommand": "التعرف_البصري"
+    },
+    {
+      "type": "alias",
+      "key": "nulis",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/tools/كتابة_يدوية.js",
+      "shadowedCommand": "كتابة_قصص"
+    },
+    {
+      "type": "alias",
+      "key": "rvo",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/tools/مرة_واحدة.js",
+      "shadowedCommand": "فضح"
+    },
+    {
+      "type": "alias",
+      "key": "tts",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/tts/تكلم.js",
+      "shadowedCommand": "صوت"
+    },
+    {
+      "type": "alias",
+      "key": "stats",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/user/profile.js",
+      "shadowedCommand": "حالة_البوت"
+    },
+    {
+      "type": "alias",
+      "key": "status",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/user/profile.js",
+      "shadowedCommand": "بينغ"
+    },
+    {
+      "type": "alias",
+      "key": "daily",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/user/مكافأة_يوميه.js",
+      "shadowedCommand": "يومي"
+    },
+    {
+      "type": "alias-shadows-command",
+      "key": "يومي",
+      "keptFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/user/مكافأة_يوميه.js",
+      "shadowedFile": "/tmp/claude-0/-home-user-ERIN-MEDIA/5c2aa36f-18de-596d-b82d-921d007a7e1d/scratchpad/bot2/plugins/rpg/يومي.js"
+    }
+  ]
+}

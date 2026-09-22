@@ -1,0 +1,796 @@
+{
+  "version": 1,
+  "runs": [
+    {
+      "id": "run-1790024201697-fupvye",
+      "status": "blocked",
+      "message": "رسالة اختبار عادية",
+      "intent": "test_project",
+      "actor": "201999999999@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T20:56:41.697Z",
+      "updatedAt": "2026-09-21T20:56:41.698Z"
+    },
+    {
+      "id": "run-1790024202030-qlgf9d",
+      "status": "blocked",
+      "message": "رسالة تسبب اختبار فشل",
+      "intent": "test_project",
+      "actor": "201999999998@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T20:56:42.030Z",
+      "updatedAt": "2026-09-21T20:56:42.031Z"
+    },
+    {
+      "id": "run-1790025709871-te5mkl",
+      "status": "completed",
+      "message": "عدّل ملف اختبار",
+      "intent": "modify_project",
+      "actor": "owner@test",
+      "isDeveloper": true,
+      "highestRisk": "write",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.write_file",
+          "input": {
+            "path": "tests/fixtures/agent-control-target.txt",
+            "content": "after\n"
+          },
+          "risk": "write",
+          "status": "completed",
+          "verification": true
+        }
+      ],
+      "createdAt": "2026-09-21T21:21:49.871Z",
+      "updatedAt": "2026-09-21T21:21:49.875Z",
+      "success": true,
+      "resumedAt": "2026-09-21T21:21:49.875Z"
+    },
+    {
+      "id": "run-1790026744065-3swfwj",
+      "status": "completed",
+      "message": "عدّل ملف اختبار",
+      "intent": "modify_project",
+      "actor": "owner@test",
+      "isDeveloper": true,
+      "highestRisk": "write",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.write_file",
+          "input": {
+            "path": "tests/fixtures/agent-control-target.txt",
+            "content": "after\n"
+          },
+          "risk": "write",
+          "status": "completed",
+          "verification": true
+        }
+      ],
+      "createdAt": "2026-09-21T21:39:04.065Z",
+      "updatedAt": "2026-09-21T21:39:04.069Z",
+      "success": true,
+      "resumedAt": "2026-09-21T21:39:04.069Z"
+    },
+    {
+      "id": "run-1790026792747-9pgbo2",
+      "status": "blocked",
+      "message": "رسالة اختبار عادية",
+      "intent": "test_project",
+      "actor": "201999999999@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T21:39:52.747Z",
+      "updatedAt": "2026-09-21T21:39:52.748Z"
+    },
+    {
+      "id": "run-1790026793081-sq2djx",
+      "status": "blocked",
+      "message": "رسالة تسبب اختبار فشل",
+      "intent": "test_project",
+      "actor": "201999999998@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T21:39:53.081Z",
+      "updatedAt": "2026-09-21T21:39:53.082Z"
+    },
+    {
+      "id": "run-1790027042614-j0ggq1",
+      "status": "blocked",
+      "message": "رسالة اختبار عادية",
+      "intent": "test_project",
+      "actor": "201999999999@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T21:44:02.614Z",
+      "updatedAt": "2026-09-21T21:44:02.615Z"
+    },
+    {
+      "id": "run-1790027042948-ll7uqb",
+      "status": "blocked",
+      "message": "رسالة تسبب اختبار فشل",
+      "intent": "test_project",
+      "actor": "201999999998@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T21:44:02.948Z",
+      "updatedAt": "2026-09-21T21:44:02.949Z"
+    },
+    {
+      "id": "run-1790027110806-gohthz",
+      "status": "blocked",
+      "message": "رسالة اختبار عادية",
+      "intent": "test_project",
+      "actor": "201999999999@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T21:45:10.806Z",
+      "updatedAt": "2026-09-21T21:45:10.807Z"
+    },
+    {
+      "id": "run-1790027111139-78gnzr",
+      "status": "blocked",
+      "message": "رسالة تسبب اختبار فشل",
+      "intent": "test_project",
+      "actor": "201999999998@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T21:45:11.139Z",
+      "updatedAt": "2026-09-21T21:45:11.140Z"
+    },
+    {
+      "id": "run-1790027120209-dduhni",
+      "status": "blocked",
+      "message": "رسالة اختبار عادية",
+      "intent": "test_project",
+      "actor": "201999999999@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T21:45:20.209Z",
+      "updatedAt": "2026-09-21T21:45:20.210Z"
+    },
+    {
+      "id": "run-1790027120542-hltv9x",
+      "status": "blocked",
+      "message": "رسالة تسبب اختبار فشل",
+      "intent": "test_project",
+      "actor": "201999999998@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T21:45:20.542Z",
+      "updatedAt": "2026-09-21T21:45:20.543Z"
+    },
+    {
+      "id": "run-1790027132516-fx1vmz",
+      "status": "blocked",
+      "message": "رسالة اختبار عادية",
+      "intent": "test_project",
+      "actor": "201999999999@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T21:45:32.516Z",
+      "updatedAt": "2026-09-21T21:45:32.518Z"
+    },
+    {
+      "id": "run-1790027132851-ap86st",
+      "status": "blocked",
+      "message": "رسالة تسبب اختبار فشل",
+      "intent": "test_project",
+      "actor": "201999999998@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T21:45:32.851Z",
+      "updatedAt": "2026-09-21T21:45:32.853Z"
+    },
+    {
+      "id": "run-1790027145643-v4ux6z",
+      "status": "completed",
+      "message": "عدّل ملف اختبار",
+      "intent": "modify_project",
+      "actor": "owner@test",
+      "isDeveloper": true,
+      "highestRisk": "write",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.write_file",
+          "input": {
+            "path": "tests/fixtures/agent-control-target.txt",
+            "content": "after\n"
+          },
+          "risk": "write",
+          "status": "completed",
+          "verification": true
+        }
+      ],
+      "createdAt": "2026-09-21T21:45:45.643Z",
+      "updatedAt": "2026-09-21T21:45:45.648Z",
+      "success": true,
+      "resumedAt": "2026-09-21T21:45:45.648Z"
+    },
+    {
+      "id": "run-1790027194297-rw33bx",
+      "status": "blocked",
+      "message": "رسالة اختبار عادية",
+      "intent": "test_project",
+      "actor": "201999999999@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T21:46:34.297Z",
+      "updatedAt": "2026-09-21T21:46:34.299Z"
+    },
+    {
+      "id": "run-1790027194633-xyjgux",
+      "status": "blocked",
+      "message": "رسالة تسبب اختبار فشل",
+      "intent": "test_project",
+      "actor": "201999999998@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T21:46:34.633Z",
+      "updatedAt": "2026-09-21T21:46:34.635Z"
+    },
+    {
+      "id": "run-1790027548996-7oruy4",
+      "status": "completed",
+      "message": "عدّل ملف اختبار",
+      "intent": "modify_project",
+      "actor": "owner@test",
+      "isDeveloper": true,
+      "highestRisk": "write",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.write_file",
+          "input": {
+            "path": "tests/fixtures/agent-control-target.txt",
+            "content": "after\n"
+          },
+          "risk": "write",
+          "status": "completed",
+          "verification": true
+        }
+      ],
+      "createdAt": "2026-09-21T21:52:28.996Z",
+      "updatedAt": "2026-09-21T21:52:29.002Z",
+      "success": true,
+      "resumedAt": "2026-09-21T21:52:29.002Z"
+    },
+    {
+      "id": "run-1790027560961-hjpjc5",
+      "status": "blocked",
+      "message": "رسالة اختبار عادية",
+      "intent": "test_project",
+      "actor": "201999999999@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T21:52:40.961Z",
+      "updatedAt": "2026-09-21T21:52:40.963Z"
+    },
+    {
+      "id": "run-1790027561294-bi50pe",
+      "status": "blocked",
+      "message": "رسالة تسبب اختبار فشل",
+      "intent": "test_project",
+      "actor": "201999999998@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T21:52:41.294Z",
+      "updatedAt": "2026-09-21T21:52:41.295Z"
+    },
+    {
+      "id": "run-1790027906291-mf58ca",
+      "status": "completed",
+      "message": "عدّل ملف اختبار",
+      "intent": "modify_project",
+      "actor": "owner@test",
+      "isDeveloper": true,
+      "highestRisk": "write",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.write_file",
+          "input": {
+            "path": "tests/fixtures/agent-control-target.txt",
+            "content": "after\n"
+          },
+          "risk": "write",
+          "status": "completed",
+          "verification": true
+        }
+      ],
+      "createdAt": "2026-09-21T21:58:26.291Z",
+      "updatedAt": "2026-09-21T21:58:26.298Z",
+      "success": true,
+      "resumedAt": "2026-09-21T21:58:26.298Z"
+    },
+    {
+      "id": "run-1790027964011-jr9h8w",
+      "status": "blocked",
+      "message": "رسالة اختبار عادية",
+      "intent": "test_project",
+      "actor": "201999999999@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T21:59:24.012Z",
+      "updatedAt": "2026-09-21T21:59:24.013Z"
+    },
+    {
+      "id": "run-1790027964346-vnsii7",
+      "status": "blocked",
+      "message": "رسالة تسبب اختبار فشل",
+      "intent": "test_project",
+      "actor": "201999999998@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T21:59:24.346Z",
+      "updatedAt": "2026-09-21T21:59:24.347Z"
+    },
+    {
+      "id": "run-1790028070429-n630qn",
+      "status": "completed",
+      "message": "عدّل ملف اختبار",
+      "intent": "modify_project",
+      "actor": "owner@test",
+      "isDeveloper": true,
+      "highestRisk": "write",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.write_file",
+          "input": {
+            "path": "tests/fixtures/agent-control-target.txt",
+            "content": "after\n"
+          },
+          "risk": "write",
+          "status": "completed",
+          "verification": true
+        }
+      ],
+      "createdAt": "2026-09-21T22:01:10.429Z",
+      "updatedAt": "2026-09-21T22:01:10.438Z",
+      "success": true,
+      "resumedAt": "2026-09-21T22:01:10.438Z"
+    },
+    {
+      "id": "run-1790028082175-a2ekz8",
+      "status": "blocked",
+      "message": "رسالة اختبار عادية",
+      "intent": "test_project",
+      "actor": "201999999999@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T22:01:22.175Z",
+      "updatedAt": "2026-09-21T22:01:22.177Z"
+    },
+    {
+      "id": "run-1790028082511-zqiyas",
+      "status": "blocked",
+      "message": "رسالة تسبب اختبار فشل",
+      "intent": "test_project",
+      "actor": "201999999998@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T22:01:22.511Z",
+      "updatedAt": "2026-09-21T22:01:22.512Z"
+    },
+    {
+      "id": "run-1790028353958-4booi2",
+      "status": "completed",
+      "message": "عدّل ملف اختبار",
+      "intent": "modify_project",
+      "actor": "owner@test",
+      "isDeveloper": true,
+      "highestRisk": "write",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.write_file",
+          "input": {
+            "path": "tests/fixtures/agent-control-target.txt",
+            "content": "after\n"
+          },
+          "risk": "write",
+          "status": "completed",
+          "verification": true
+        }
+      ],
+      "createdAt": "2026-09-21T22:05:53.958Z",
+      "updatedAt": "2026-09-21T22:05:53.966Z",
+      "success": true,
+      "resumedAt": "2026-09-21T22:05:53.966Z"
+    },
+    {
+      "id": "run-1790028379331-rvcekm",
+      "status": "completed",
+      "message": "عدّل ملف اختبار",
+      "intent": "modify_project",
+      "actor": "owner@test",
+      "isDeveloper": true,
+      "highestRisk": "write",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.write_file",
+          "input": {
+            "path": "tests/fixtures/agent-control-target.txt",
+            "content": "after\n"
+          },
+          "risk": "write",
+          "status": "completed",
+          "verification": true
+        }
+      ],
+      "createdAt": "2026-09-21T22:06:19.332Z",
+      "updatedAt": "2026-09-21T22:06:19.341Z",
+      "success": true,
+      "resumedAt": "2026-09-21T22:06:19.341Z"
+    },
+    {
+      "id": "run-1790028391037-pt267p",
+      "status": "blocked",
+      "message": "رسالة اختبار عادية",
+      "intent": "test_project",
+      "actor": "201999999999@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T22:06:31.037Z",
+      "updatedAt": "2026-09-21T22:06:31.039Z"
+    },
+    {
+      "id": "run-1790028391371-3d01ul",
+      "status": "blocked",
+      "message": "رسالة تسبب اختبار فشل",
+      "intent": "test_project",
+      "actor": "201999999998@s.whatsapp.net",
+      "isDeveloper": false,
+      "highestRisk": "safe_execution",
+      "requiresApproval": true,
+      "steps": [
+        {
+          "tool": "project.run_tests",
+          "input": {
+            "script": "test:syntax"
+          },
+          "risk": "safe_execution",
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-09-21T22:06:31.371Z",
+      "updatedAt": "2026-09-21T22:06:31.373Z"
+    }
+  ],
+  "approvals": [
+    {
+      "id": "approval-1790025709872-q3dis4",
+      "runId": "run-1790025709871-te5mkl",
+      "actor": "owner@test",
+      "reason": "الخطة تتضمن تعديلاً أو تنفيذاً حساساً.",
+      "status": "approved",
+      "createdAt": "2026-09-21T21:21:49.872Z",
+      "expiresAt": "2026-09-21T21:36:49.872Z",
+      "decidedBy": "owner@test",
+      "note": "",
+      "decidedAt": "2026-09-21T21:21:49.872Z"
+    },
+    {
+      "id": "approval-1790026744066-k45go6",
+      "runId": "run-1790026744065-3swfwj",
+      "actor": "owner@test",
+      "reason": "الخطة تتضمن تعديلاً أو تنفيذاً حساساً.",
+      "status": "approved",
+      "createdAt": "2026-09-21T21:39:04.066Z",
+      "expiresAt": "2026-09-21T21:54:04.066Z",
+      "decidedBy": "owner@test",
+      "note": "",
+      "decidedAt": "2026-09-21T21:39:04.066Z"
+    },
+    {
+      "id": "approval-1790027145644-439urs",
+      "runId": "run-1790027145643-v4ux6z",
+      "actor": "owner@test",
+      "reason": "الخطة تتضمن تعديلاً أو تنفيذاً حساساً.",
+      "status": "approved",
+      "createdAt": "2026-09-21T21:45:45.644Z",
+      "expiresAt": "2026-09-21T22:00:45.644Z",
+      "decidedBy": "owner@test",
+      "note": "",
+      "decidedAt": "2026-09-21T21:45:45.645Z"
+    },
+    {
+      "id": "approval-1790027548997-1wnunc",
+      "runId": "run-1790027548996-7oruy4",
+      "actor": "owner@test",
+      "reason": "الخطة تتضمن تعديلاً أو تنفيذاً حساساً.",
+      "status": "approved",
+      "createdAt": "2026-09-21T21:52:28.997Z",
+      "expiresAt": "2026-09-21T22:07:28.997Z",
+      "decidedBy": "owner@test",
+      "note": "",
+      "decidedAt": "2026-09-21T21:52:28.998Z"
+    },
+    {
+      "id": "approval-1790027906292-jgd9l1",
+      "runId": "run-1790027906291-mf58ca",
+      "actor": "owner@test",
+      "reason": "الخطة تتضمن تعديلاً أو تنفيذاً حساساً.",
+      "status": "approved",
+      "createdAt": "2026-09-21T21:58:26.292Z",
+      "expiresAt": "2026-09-21T22:13:26.292Z",
+      "decidedBy": "owner@test",
+      "note": "",
+      "decidedAt": "2026-09-21T21:58:26.293Z"
+    },
+    {
+      "id": "approval-1790028070432-qndgr5",
+      "runId": "run-1790028070429-n630qn",
+      "actor": "owner@test",
+      "reason": "الخطة تتضمن تعديلاً أو تنفيذاً حساساً.",
+      "status": "approved",
+      "createdAt": "2026-09-21T22:01:10.432Z",
+      "expiresAt": "2026-09-21T22:16:10.432Z",
+      "decidedBy": "owner@test",
+      "note": "",
+      "decidedAt": "2026-09-21T22:01:10.433Z"
+    },
+    {
+      "id": "approval-1790028353960-kooi2d",
+      "runId": "run-1790028353958-4booi2",
+      "actor": "owner@test",
+      "reason": "الخطة تتضمن تعديلاً أو تنفيذاً حساساً.",
+      "status": "approved",
+      "createdAt": "2026-09-21T22:05:53.960Z",
+      "expiresAt": "2026-09-21T22:20:53.960Z",
+      "decidedBy": "owner@test",
+      "note": "",
+      "decidedAt": "2026-09-21T22:05:53.961Z"
+    },
+    {
+      "id": "approval-1790028379333-of4ktf",
+      "runId": "run-1790028379331-rvcekm",
+      "actor": "owner@test",
+      "reason": "الخطة تتضمن تعديلاً أو تنفيذاً حساساً.",
+      "status": "approved",
+      "createdAt": "2026-09-21T22:06:19.333Z",
+      "expiresAt": "2026-09-21T22:21:19.333Z",
+      "decidedBy": "owner@test",
+      "note": "",
+      "decidedAt": "2026-09-21T22:06:19.334Z"
+    }
+  ],
+  "updatedAt": "2026-09-21T22:06:31.373Z"
+}

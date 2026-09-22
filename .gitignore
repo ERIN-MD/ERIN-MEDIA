@@ -1,0 +1,6 @@
+# dependency tree (never committed)
+node_modules/
+bot/node_modules
+
+# scratch output from running the audit tools outside bot/
+/reports/

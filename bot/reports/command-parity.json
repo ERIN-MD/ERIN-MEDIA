@@ -1,0 +1,75 @@
+{
+  "generatedAt": "2026-09-22T05:30:35.505Z",
+  "before": {
+    "file": "reports/command-inventory.BEFORE.json",
+    "pluginFiles": 897,
+    "pluginsParsed": 895,
+    "importFailures": 2,
+    "uniqueCommands": 1199,
+    "uniqueAliases": 1256,
+    "categories": 36,
+    "ownerCommands": 188,
+    "premiumCommands": 16,
+    "partnerCommands": 0,
+    "adminCommands": 70,
+    "botAdminCommands": 31,
+    "groupOnlyCommands": 161,
+    "privateOnlyCommands": 36,
+    "disabledCommands": 0,
+    "withoutHandler": 0,
+    "aiCommands": 72,
+    "collisionCommandKeys": 13,
+    "collisionAliasKeys": 61,
+    "selfDuplicateConfigs": 14
+  },
+  "after": {
+    "file": "reports/command-inventory.json",
+    "pluginFiles": 897,
+    "pluginsParsed": 897,
+    "importFailures": 0,
+    "uniqueCommands": 1201,
+    "uniqueAliases": 1262,
+    "categories": 36,
+    "ownerCommands": 188,
+    "premiumCommands": 16,
+    "partnerCommands": 0,
+    "adminCommands": 70,
+    "botAdminCommands": 31,
+    "groupOnlyCommands": 161,
+    "privateOnlyCommands": 36,
+    "disabledCommands": 0,
+    "withoutHandler": 0,
+    "aiCommands": 73,
+    "collisionCommandKeys": 13,
+    "collisionAliasKeys": 61,
+    "selfDuplicateConfigs": 14
+  },
+  "removedCommands": [],
+  "addedCommands": [
+    "تشويش",
+    "فلتر"
+  ],
+  "removedAliases": [],
+  "addedAliases": [
+    "blur",
+    "filter",
+    "التسجيل",
+    "انشاء_حساب",
+    "تسجيل",
+    "سجل"
+  ],
+  "removedPluginFiles": [],
+  "addedPluginFiles": [
+    "plugins/ai/تشويش.js",
+    "plugins/ephoto/أبيضوأسود.js"
+  ],
+  "permissionChanges": [],
+  "categoryChanges": [],
+  "verdict": {
+    "commandLoss": 0,
+    "aliasLoss": 0,
+    "pluginLoss": 0,
+    "permissionDowngrades": 0
+  },
+  "status": "PASS"
+}

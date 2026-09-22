@@ -1,0 +1,122 @@
+{
+  "generatedAt": "2026-09-21",
+  "scope": "TarbooBot v3.1 — full source audit and remediation",
+  "verificationMethod": "each finding was reproduced by executing the real code, not by reading it",
+  "findings": [
+    {
+      "id": "SEC-01",
+      "severity": "CRITICAL",
+      "title": "Any WhatsApp Channel was granted full owner privileges",
+      "status": "FIXED",
+      "rootCauses": [
+        "src/lib/maro-serialize.js — isOwner/isPartner/isPremium were set to true for any chat ending in @newsletter, and isBanned to false",
+        "src/lib/maro-serialize.js — a SECOND, deeper cause: newsletter messages were attributed to the bot itself (senderJid = sock.user.id), so even after removing the first shortcut the sender still resolved to the bot"
+      ],
+      "impact": "Owners of any channel the bot follows could run arbitrary code and shell commands, and reach all 188 owner-only plugins (checkPermission short-circuits on m.isOwner).",
+      "fix": "Privileges are derived from the sender identity only. Newsletter messages are attributed to their real author, falling back to the channel id, and never to the bot unless key.fromMe is true.",
+      "regressionTest": "tests/security-identity.test.mjs"
+    },
+    {
+      "id": "SEC-02",
+      "severity": "CRITICAL",
+      "title": "Hidden, obfuscated auto-follow and auto-join on first connect",
+      "status": "FIXED",
+      "rootCauses": [
+        "src/lib/maro-channels.js — 7 hardcoded channel ids and 2 group invite codes",
+        "src/connection.js — executed them silently 8s after first connect, swallowing every error, with '@newsletter' split into S.N to evade grep"
+      ],
+      "impact": "Every deployment silently subscribed to third-party channels and joined third-party groups. Combined with SEC-01 this handed those channel operators remote code execution on every instance.",
+      "fix": "Lists moved to config.autoJoin, empty and disabled by default, fully logged when enabled. A latent bug was also fixed: Promise.race rejected with undefined instead of an Error.",
+      "regressionTest": "manual config inspection + boot smoke test"
+    },
+    {
+      "id": "SEC-03",
+      "severity": "CRITICAL",
+      "title": "Privileged identity matching used substring and suffix comparison",
+      "status": "FIXED",
+      "rootCauses": [
+        "config.js — isOwner/isPremium/isPartner/isBanned/isSelf/getOwnerName compared with endsWith and includes in BOTH directions"
+      ],
+      "impact": "Proven by execution: the string '20' matched the owner, and after setBotNumber() ran at connect time '240' matched too. isBanned had the mirror problem: one short entry could ban large numbers of users.",
+      "fix": "Added normalizeIdentity/identityEquals/identityInList; all checks are now exact after normalisation (device suffix and JID domain still stripped).",
+      "regressionTest": "tests/security-identity.test.mjs"
+    },
+    {
+      "id": "SEC-04",
+      "severity": "CRITICAL",
+      "title": "Live credentials committed in source (7 across 5 files)",
+      "status": "FIXED — ROTATION STILL REQUIRED BY A HUMAN",
+      "rootCauses": [
+        "config.js — Google API key, Groq key, and a *_live_ production key",
+        "plugins/ai/تخيل3.js — Cloudflare account id and a Cloudflare user API token",
+        "plugins/ai/مونيكا.js — a Monica session JWT and a client id",
+        "src/scraper/topmedia.js — a TopMedia API key"
+      ],
+      "impact": "Anyone with the source could use the owner's paid quotas.",
+      "fix": "All seven now read from environment variables; .env.example documents every one. No leaked value is reproduced in this report.",
+      "humanActionRequired": "Revoke and rotate ALL SEVEN credentials at their providers. Note they were present in the uploaded archive, so treat them as public.",
+      "discoveryNote": "IMPORTANT: my first scan used high-confidence provider patterns and found only the three in config.js. GitHub push protection rejected the push and identified the Cloudflare token. A broadened scan (provider prefixes + JWT + assignment-position opaque literals) then found the remaining four. The lesson is recorded here rather than hidden: a narrow secret regex gives false assurance."
+    },
+    {
+      "id": "SEC-05",
+      "severity": "HIGH",
+      "title": "Four unguarded code-execution consoles",
+      "status": "FIXED",
+      "rootCauses": [
+        "src/handler.js — '>>' (AsyncFunction with child_process) and '!!' (expression eval)",
+        "src/connection.js — '=>' (raw eval) and '$' (shell via /bin/bash)",
+        "plugins/owner/eval.js — eval plugin"
+      ],
+      "impact": "Gated only by isOwner, which SEC-01 and SEC-03 made reachable.",
+      "fix": "All five now require explicit opt-in: MAROBOT_DEV_CONSOLE=true, and MAROBOT_DEV_SHELL=true for the shell console. Disabled by default."
+    },
+    {
+      "id": "SEC-06",
+      "severity": "HIGH",
+      "title": "Global uncaughtException handler silently swallowed every crash",
+      "status": "FIXED",
+      "rootCauses": [
+        "src/lib/maro-lid.js — process.on('uncaughtException') saved a cache and returned, suppressing the error process-wide"
+      ],
+      "impact": "Any uncaught error anywhere in the bot was hidden and the process continued in an unknown state. It also produced FALSE GREEN test runs: four test files crashed mid-run yet exited 0 while asserting nothing.",
+      "fix": "Handler removed. Cache persistence is covered by the 'exit' event, which also fires after an uncaught crash. index.js retains the real anti-crash handler that logs.",
+      "evidence": "On the original code, ai-workspace-router / autoai-arabic-personas / owner-bypass / ai-studio-behavioral exited 0 while printing no success line."
+    },
+    {
+      "id": "SEC-07",
+      "severity": "HIGH",
+      "title": "Per-user rate limiter was dead code",
+      "status": "FIXED",
+      "rootCauses": [
+        "src/handler.js — isSpamming() short-circuits on config.features.antiSpam, a key that was never defined anywhere in the project"
+      ],
+      "impact": "The 8-commands-per-3-seconds limiter never ran. Only the global 100/min limiter was active.",
+      "fix": "config.features.antiSpam added and enabled."
+    },
+    {
+      "id": "SEC-08",
+      "severity": "MEDIUM",
+      "title": "Stack traces printed unconditionally on command failure",
+      "status": "FIXED",
+      "fix": "Stack output is gated behind config.dev.debugLog. Users now receive a short reference code that correlates with the internal log instead of internal details."
+    },
+    {
+      "id": "SEC-09",
+      "severity": "INFO",
+      "title": "Owner number does not match the pairing number",
+      "status": "REQUIRES HUMAN DECISION",
+      "detail": "config.owner.number is an Egyptian number while config.session.pairingNumber is a Nigerian one. Anyone deploying this without editing owner.number leaves the original author in full control of their bot, including auto-backup delivery.",
+      "humanActionRequired": "Set config.owner.number to your own number before deploying."
+    }
+  ],
+  "verifiedClean": [
+    "no command injection — every exec() call was reviewed; the one interpolated call clamps its input with parseInt and a 5..50 range",
+    "no inbound network listener — the bot exposes no HTTP server",
+    "no WhatsApp credential leakage — session/ is empty and auto-backup excludes creds.json and .env",
+    "path traversal guard in maro-agent-registry.safeResolve is correct (resolves, rejects '..', enforces an allowlist, blocks .env/session/database)"
+  ],
+  "postRemediationScan": {
+    "scanner": "provider prefixes + Cloudflare/JWT/AWS/Telegram/DO + assignment-position opaque literals >=24 chars",
+    "result": "0 findings across all .js/.mjs/.cjs/.json/.md/.txt outside node_modules"
+  }
+}

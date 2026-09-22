@@ -1,0 +1,56 @@
+{
+  "generatedAt": "2026-09-21",
+  "identity": {
+    "before": "frame-based: ╭┈┈ / ┃ / ╰┈┈ / ⬡ / ✦, emoji-per-category, seven fruit colour themes",
+    "after": "AXION — geometric marks (◆ ◇ ▸ ▪ ⌁), solid/dashed rules (▰ ╌), chip syntax ⟨ ⟩, mono ordinals, WhatsApp-native emphasis",
+    "rule": "none of the legacy frame glyphs are reused; asserted by tests"
+  },
+  "newModules": [
+    { "path": "src/lib/ui/typography.js", "role": "safe Unicode styling; protected-segment detection; strip() for search/compare" },
+    { "path": "src/lib/ui/theme.js", "role": "semantic glyph tokens, permission badges, processing states, category icons/labels" },
+    { "path": "src/lib/ui/identity.js", "role": "single source of truth for brand, read from config.ui.identity" },
+    { "path": "src/lib/ui/components.js", "role": "ui.header/section/row/listItem/commandRow/badge/card/pagination/success/error/loading/empty/locked" },
+    { "path": "src/lib/ui/menu-engine.js", "role": "registry-driven discovery, permission filter, search, five renderers, cached" },
+    { "path": "src/lib/ui/dispatch.js", "role": "renderer/adapter: image+caption with guaranteed text fallback" },
+    { "path": "src/lib/ui/index.js", "role": "barrel export" }
+  ],
+  "typographySafety": {
+    "styledScripts": "Latin only (Mathematical Alphanumeric Symbols); Arabic uses WhatsApp *bold* / _italic_ because it has no reliable styled variants",
+    "neverStyled": ["command ids", "aliases", "button ids", "URLs", "emails", "JIDs", "phone numbers", "file paths", "code and inline code", "JSON/database keys", "stack traces"],
+    "mechanism": "segment() marks protected spans via regex and styling skips them entirely",
+    "modes": ["luxury", "compact", "plain"],
+    "gotchaDocumented": "styled text uses different codepoints, so plain-text search will not match it — style.strip() exists for that and is asserted in tests"
+  },
+  "migrationStrategy": {
+    "chosen": "centralised — migrate the shared response surfaces so all 897 plugins inherit the new identity without being edited",
+    "rationale": "editing 897 files would risk behaviour loss for cosmetic gain; the user-visible strings for every plugin flow through config.messages, maro-formatter and the handler",
+    "centralSurfacesMigrated": [
+      "config.messages (wait/success/error/ownerOnly/premiumOnly/groupOnly/privateOnly/adminOnly/botAdminOnly/cooldown/energiExceeded/limitDeducted/banned/rejectCall)",
+      "config.errorTemplate",
+      "src/lib/maro-formatter.js — createWaitMessage/createSuccessMessage/createErrorMessage/createWarningMessage (+ new createStateMessage)",
+      "src/lib/maro-text-style.js — formatTextPanel/commandGuide/statusPanel now delegate to the design system, signatures unchanged",
+      "src/handler.js — central command-failure reply"
+    ],
+    "menusRebuilt": [
+      "plugins/main/اوامر.js (menu)",
+      "plugins/main/الأوامر.js (allmenu)",
+      "plugins/main/فئة.js (menucat)",
+      "plugins/main/بحث.js (carifitur)"
+    ],
+    "pluginsMigratedIndividually": ["plugins/group/autoai.js — Auto AI status panel"],
+    "notMigrated": "per-plugin bespoke strings inside the remaining ~890 plugins still carry their original wording; they now sit on the new shared states/messages but their own literals were intentionally left untouched to guarantee functional parity"
+  },
+  "featureFlag": {
+    "key": "config.ui.engine",
+    "values": ["axion", "legacy"],
+    "legacyPreservedAt": "plugins/main/_legacy/*.legacy.js",
+    "loaderVisibility": "the loader skips nested directories, so the legacy copies never register or collide",
+    "test": "tests/ui-feature-flag.test.mjs"
+  },
+  "contractsPreserved": {
+    "commandNames": ["menu", "الأوامر", "فئة", "بحث"],
+    "aliases": ["help", "اوامر", "commands", "m", "أوامر", "allmenu", "menucat", "carifitur"],
+    "permissions": "unchanged for all four",
+    "verifiedBy": "tests/ui-menu-engine.test.mjs + reports/command-parity.json"
+  }
+}
