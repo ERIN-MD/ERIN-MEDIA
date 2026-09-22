@@ -5,9 +5,9 @@ import config from "../../config.js";
 import ui from "../../src/lib/ui/components.js";
 import {
   searchCommands, viewerContext, findCommandExact,
-  renderSearch, renderCommandDetail,
+  renderSearch, renderCommandDetail, searchButtons, commandButtons,
 } from "../../src/lib/ui/menu-engine.js";
-import { sendMenu } from "../../src/lib/ui/dispatch.js";
+import { sendInteractive, quickReply } from "../../src/lib/ui/interactive.js";
 
 const pluginConfig = {
   name: "بحث",
@@ -30,32 +30,45 @@ async function handler(m, ctx) {
     const legacy = await import("./_legacy/بحث.legacy.js");
     return (legacy.default?.handler || legacy.handler)(m, ctx);
   }
+  const p = ui.identity.prefix;
   const query = (m.fullArgs || m.text || "").trim();
+
   if (!query) {
-    return sendMenu(
-      m, ctx,
-      ui.card({
+    return sendInteractive(m, ctx, {
+      body: ui.card({
         title: "البحث",
         compactHeader: true,
         body: ui.info("اكتب كلمة للبحث في كل الأوامر والمرادفات والأوصاف."),
         sections: [{ title: "أمثلة", lines: [
-          `${ui.GLYPH.chevron} ${ui.style.command(`${ui.identity.prefix}بحث ملصق`)}`,
-          `${ui.GLYPH.chevron} ${ui.style.command(`${ui.identity.prefix}بحث تحميل`)}`,
+          `${ui.GLYPH.chevron} ${ui.style.command(`${p}بحث ملصق`)}`,
+          `${ui.GLYPH.chevron} ${ui.style.command(`${p}بحث تحميل`)}`,
         ] }],
       }),
-    );
+      buttons: [quickReply("الرئيسية", `${p}menu`)],
+    });
   }
 
-  // تطابق تام لاسم أمر ⇒ اعرض بطاقة التفاصيل مباشرة.
+  // تطابق تام لاسم أمر ⇒ بطاقة التفاصيل مباشرة.
   // ⚠️ البحث التقريبي لا يُستخدم أبداً لتنفيذ أمر — للعرض فقط.
   const exact = findCommandExact(query);
-  if (exact) return sendMenu(m, ctx, renderCommandDetail(m, exact));
+  if (exact) {
+    return sendInteractive(m, ctx, {
+      body: renderCommandDetail(m, exact),
+      buttons: commandButtons(m, exact),
+    });
+  }
 
   const results = searchCommands(query, viewerContext(m), { limit: 12 });
   if (results.length === 1 && results[0].exact) {
-    return sendMenu(m, ctx, renderCommandDetail(m, results[0].command));
+    return sendInteractive(m, ctx, {
+      body: renderCommandDetail(m, results[0].command),
+      buttons: commandButtons(m, results[0].command),
+    });
   }
-  return sendMenu(m, ctx, renderSearch(m, query, results));
+  return sendInteractive(m, ctx, {
+    body: renderSearch(m, query, results),
+    buttons: searchButtons(m, results),
+  });
 }
 
 export { pluginConfig as config, handler };

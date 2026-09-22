@@ -785,7 +785,18 @@ async function serialize(sock, msg, store = {}) {
       replyVariant = 1;
     }
 
+    // سياق القناة يظهر أعلى كل رسالة من البوت (كما في النسخة الأولى).
+    // يُعطَّل عند الحاجة بـ config.saluran.showInAllMessages = false
+    let channelCtx = {};
+    if (config.saluran?.showInAllMessages !== false) {
+      try {
+        const { saluranCtx } = await import("./maro-context.js");
+        channelCtx = saluranCtx();
+      } catch { }
+    }
+
     let contextInfo = {
+      ...channelCtx,
       mentionedJid: options?.mentions || [m?.sender] || [],
       ...options.contextInfo,
     };
@@ -1236,10 +1247,19 @@ else if (replyVariant === 12) {
       });
     }
       
-	    // الشكل الافتراضي - نص عادي
+	    // الشكل الافتراضي - نص عادي + تذييل موحّد
+    let finalText = text;
+    if (config.ui?.globalFooter !== false && typeof text === "string") {
+      try {
+        const { footerLine } = await import("./ui/interactive.js");
+        const footer = footerLine();
+        // لا تكرّر التذييل إذا كانت الرسالة تحمله أصلاً
+        if (!finalText.includes(footer)) finalText = `${finalText}\n\n⌁ _${footer}_`;
+      } catch { }
+    }
     return sock.sendMessage(
       await ensureResolved(m.chat),
-      { text, ...defaultOptions, ...options },
+      { text: finalText, ...defaultOptions, ...options },
       { quoted: quotedMsg },
     );
   };

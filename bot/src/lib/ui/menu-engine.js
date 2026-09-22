@@ -13,6 +13,8 @@ import ui from "./components.js";
 import identity from "./identity.js";
 import { GLYPH } from "./theme.js";
 import { pluginStore } from "../maro-plugins.js";
+import { quickReply, listButton, urlButton } from "./interactive.js";
+import config from "../../../config.js";
 
 // ── ذاكرة مؤقتة للسجل (لا نمسح القرص عند كل استدعاء قائمة) ─────
 let _cache = null;
@@ -497,6 +499,125 @@ function renderSearch(m, query, results) {
   });
 }
 
+
+// ═══════════════════════════════════════════════════════════════
+// 🎛️ أزرار الشاشات — نفس آلية النسخة الأولى (native flow)
+// ═══════════════════════════════════════════════════════════════
+const P = () => identity.prefix;
+
+/** أزرار الشاشة الرئيسية: قائمة الأقسام + اختصارات */
+function homeButtons(m) {
+  if (config.ui?.buttons === false) return [];
+  const v = viewerContext(m);
+  const cats = visibleCategories(v, { mode: "all" });
+  const rows = cats.slice(0, 10).map((c) => ({
+    header: c.icon,
+    title: `${c.label}`,
+    description: `${c.count} أمراً`,
+    id: `${P()}فئة ${c.key}`,
+  }));
+  return [
+    listButton("تصفّح الأقسام", [{ title: "الأقسام", label: "AXION", rows }]),
+    quickReply("الفهرس الكامل", `${P()}الأوامر`),
+    quickReply("المطوّر", `${P()}المطور`),
+  ];
+}
+
+/** أزرار شاشة الأقسام */
+function categoriesButtons(m) {
+  if (config.ui?.buttons === false) return [];
+  const v = viewerContext(m);
+  const cats = visibleCategories(v, { mode: "all" });
+  const rows = cats.slice(0, 10).map((c) => ({
+    header: c.icon,
+    title: c.label,
+    description: `${c.count} أمراً`,
+    id: `${P()}فئة ${c.key}`,
+  }));
+  return [
+    listButton("اختر قسماً", [{ title: "الأقسام", rows }]),
+    quickReply("الرئيسية", `${P()}menu`),
+  ];
+}
+
+/** أزرار قسم واحد: أوامره + تنقّل الصفحات */
+function categoryButtons(m, categoryKey, page, pages) {
+  if (config.ui?.buttons === false) return [];
+  const v = viewerContext(m);
+  const cat = visibleCategories(v, { mode: "all" }).find(
+    (c) => c.key === String(categoryKey).toLowerCase(),
+  );
+  const out = [];
+  if (cat) {
+    const start = (page - 1) * identity.itemsPerPage;
+    const rows = cat.items.slice(start, start + 10).map((c) => ({
+      header: c.icon || cat.icon,
+      title: `${P()}${c.name}`,
+      description: (c.description || "").slice(0, 60),
+      id: `${P()}بحث ${c.name}`,
+    }));
+    if (rows.length) out.push(listButton("تفاصيل أمر", [{ title: cat.label, rows }]));
+  }
+  if (pages > 1 && page < pages) {
+    out.push(quickReply(`الصفحة ${page + 1}`, `${P()}فئة ${categoryKey} ${page + 1}`));
+  }
+  out.push(quickReply("الرئيسية", `${P()}menu`));
+  return out.slice(0, 3);
+}
+
+/** أزرار بطاقة أمر */
+function commandButtons(m, cmd) {
+  if (config.ui?.buttons === false) return [];
+  const out = [];
+  if (cmd?.example) out.push(quickReply("جرّب المثال", cmd.example));
+  if (cmd?.category) out.push(quickReply(`قسم ${ui.categoryLabel(cmd.category)}`, `${P()}فئة ${cmd.category}`));
+  out.push(quickReply("الرئيسية", `${P()}menu`));
+  return out.slice(0, 3);
+}
+
+/** أزرار نتائج البحث */
+function searchButtons(m, results) {
+  if (config.ui?.buttons === false) return [];
+  const rows = (results || []).slice(0, 10).map(({ command: c }) => ({
+    header: c.icon || ui.categoryIcon(c.category),
+    title: `${P()}${c.name}`,
+    description: (c.description || "").slice(0, 60),
+    id: `${P()}بحث ${c.name}`,
+  }));
+  const out = [];
+  if (rows.length) out.push(listButton("افتح نتيجة", [{ title: "النتائج", rows }]));
+  out.push(quickReply("الرئيسية", `${P()}menu`));
+  return out;
+}
+
+/** أزرار فهرس الأوامر الكامل */
+function allCommandsButtons(m, page, pages) {
+  if (config.ui?.buttons === false) return [];
+  const out = [];
+  const v = viewerContext(m);
+  const cats = visibleCategories(v, { mode: "all" });
+  const rows = cats.slice(0, 10).map((c) => ({
+    header: c.icon,
+    title: c.label,
+    description: `${c.count} أمراً`,
+    id: `${P()}فئة ${c.key}`,
+  }));
+  if (rows.length) out.push(listButton("اذهب إلى قسم", [{ title: "الأقسام", rows }]));
+  if (pages > 1 && page < pages) out.push(quickReply(`الصفحة ${page + 1}`, `${P()}الأوامر ${page + 1}`));
+  out.push(quickReply("الرئيسية", `${P()}menu`));
+  return out.slice(0, 3);
+}
+
+/** عدد صفحات قسم — تحتاجه الإضافة لبناء أزرار التنقّل */
+function categoryPageCount(m, categoryKey) {
+  const v = viewerContext(m);
+  const cat = visibleCategories(v, { mode: "all" }).find(
+    (c) => c.key === String(categoryKey).toLowerCase(),
+  );
+  if (!cat) return 1;
+  return Math.max(1, Math.ceil(cat.count / identity.itemsPerPage));
+}
+
 export {
   getRegistry,
   buildRegistry,
@@ -515,4 +636,11 @@ export {
   renderAllCommands,
   renderCommandDetail,
   renderSearch,
+  homeButtons,
+  categoriesButtons,
+  categoryButtons,
+  commandButtons,
+  searchButtons,
+  allCommandsButtons,
+  categoryPageCount,
 };

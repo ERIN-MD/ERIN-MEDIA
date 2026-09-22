@@ -163,6 +163,7 @@ const config = {
     name: "انضم الي قناة البوت ", // اسم القناة الظاهر
     link: "https://whatsapp.com/channel/0029Vb5Vczr7j6g3foFrXM2x", // رابط القناة
     autoFollow: true, // متابعة القناة المُعرّفة أعلاه مرة واحدة بعد اتصال البوت
+    showInAllMessages: true, // true = اسم القناة يظهر أعلى كل رسالة من البوت
   },
 
   // ═══════════════════════════════════════════════
@@ -237,6 +238,8 @@ const config = {
     // ── محرك الواجهة ────────────────────────────────────────────
     engine: "axion",        // "axion" = التصميم الجديد | "legacy" = التصميم القديم
     menuImage: true,        // إرفاق صورة ترويسة مع القوائم
+    buttons: true,          // true = أزرار وقوائم منسدلة | false = نص فقط
+    globalFooter: true,     // true = تذييل موحّد أسفل كل رد
     menuImageAsset: "maro", // مفتاح من config.assets
     itemsPerPage: 14,       // عناصر كل صفحة في قوائم الأقسام
 

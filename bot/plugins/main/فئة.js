@@ -2,8 +2,11 @@
 // 📁 plugins/main/فئة.js — قائمة القسم (AXION)
 // ═══════════════════════════════════════════════
 import config from "../../config.js";
-import { renderCategory, renderCategories } from "../../src/lib/ui/menu-engine.js";
-import { sendMenu } from "../../src/lib/ui/dispatch.js";
+import {
+  renderCategory, renderCategories,
+  categoryButtons, categoriesButtons, categoryPageCount,
+} from "../../src/lib/ui/menu-engine.js";
+import { sendInteractive } from "../../src/lib/ui/interactive.js";
 
 const pluginConfig = {
   name: "فئة",
@@ -27,7 +30,12 @@ async function handler(m, ctx) {
     return (legacy.default?.handler || legacy.handler)(m, ctx);
   }
   const args = Array.isArray(m.args) ? m.args.filter(Boolean) : [];
-  if (!args.length) return sendMenu(m, ctx, renderCategories(m));
+  if (!args.length) {
+    return sendInteractive(m, ctx, {
+      body: renderCategories(m),
+      buttons: categoriesButtons(m),
+    });
+  }
 
   // الوسيط الأخير قد يكون رقم صفحة؛ وما قبله اسم القسم (قد يحوي مسافات)
   const maybePage = Number.parseInt(args[args.length - 1], 10);
@@ -35,8 +43,17 @@ async function handler(m, ctx) {
   const page = hasPage ? maybePage : 1;
   const key = (hasPage ? args.slice(0, -1) : args).join(" ").trim();
 
-  if (!key) return sendMenu(m, ctx, renderCategories(m));
-  return sendMenu(m, ctx, renderCategory(m, key, page));
+  if (!key) {
+    return sendInteractive(m, ctx, {
+      body: renderCategories(m),
+      buttons: categoriesButtons(m),
+    });
+  }
+  const pages = categoryPageCount(m, key);
+  return sendInteractive(m, ctx, {
+    body: renderCategory(m, key, page),
+    buttons: categoryButtons(m, key, Math.min(Math.max(1, page), pages), pages),
+  });
 }
 
 export { pluginConfig as config, handler };

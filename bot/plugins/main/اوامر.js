@@ -1,11 +1,12 @@
 // ═══════════════════════════════════════════════
-// 📁 plugins/main/اوامر.js — القائمة الرئيسية (AXION Menu Engine)
+// 📁 plugins/main/اوامر.js — القائمة الرئيسية (AXION)
 // ═══════════════════════════════════════════════
-// العقد الخارجي (الاسم والمرادفات والصلاحيات) محفوظ كما هو تماماً.
-// التغيير في العرض فقط. للرجوع للتصميم القديم: config.ui.engine = "legacy"
+// نفس العقد الخارجي (الاسم/المرادفات/الصلاحيات) ونفس آلية الإرسال
+// التفاعلية المستخدمة في النسخة الأولى — التغيير في التصميم فقط.
+// للرجوع للتصميم القديم: config.ui.engine = "legacy"
 import config from "../../config.js";
-import { renderHome } from "../../src/lib/ui/menu-engine.js";
-import { sendMenu } from "../../src/lib/ui/dispatch.js";
+import { renderHome, homeButtons } from "../../src/lib/ui/menu-engine.js";
+import { sendInteractive } from "../../src/lib/ui/interactive.js";
 
 const pluginConfig = {
   name: "menu",
@@ -35,7 +36,10 @@ async function handler(m, ctx) {
     uptime = formatUptime(getUptime());
   } catch { /* العرض لا يعتمد على مدة التشغيل */ }
 
-  return sendMenu(m, ctx, renderHome(m, { uptime }));
+  return sendInteractive(m, ctx, {
+    body: renderHome(m, { uptime }),
+    buttons: homeButtons(m),
+  });
 }
 
 export default { config: pluginConfig, handler };
